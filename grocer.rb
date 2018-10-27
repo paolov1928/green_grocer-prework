@@ -76,12 +76,13 @@ def checkout(cart, coupons)
   
   final_cart = apply_clearance(couponed_cart)
   #apply clearance which is the 20% dicount if the item is on clearance
-binding.pry
+
+  #totting up for each item doing price * amount
   total = 0
   final_cart.each do |name, properties|
     total += properties[:price] * properties[:count]
   end
   total = total * 0.9 if total > 100
   total
-
+  #the final discount part if over $100
 end
