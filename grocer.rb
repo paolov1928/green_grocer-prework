@@ -58,7 +58,11 @@ def apply_clearance(cart)
 end
 
 =begin
-
+Create a checkout method that calculates the total cost of the consolidated cart.
+When checking out, follow these steps in order:
+Apply coupon discounts if the proper number of items are present.
+Apply 20% discount if items are on clearance.
+If, after applying the coupon discounts and the clearance discounts, the cart's total is over $100, then apply a 10% discount.
 =end
 
 def checkout(cart, coupons)
