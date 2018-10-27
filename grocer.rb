@@ -69,7 +69,8 @@ If, after applying the coupon discounts and the clearance discounts, the cart's 
 def checkout(cart, coupons)
 
   consolidated_cart = consolidate_cart(cart)
-  #
+  #need to group up the items (hence consolidate)
+  
   couponed_cart = apply_coupons(consolidated_cart, coupons)
   final_cart = apply_clearance(couponed_cart)
   total = 0
