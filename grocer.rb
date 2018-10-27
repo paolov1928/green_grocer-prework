@@ -72,11 +72,11 @@ def checkout(cart, coupons)
   #need to group up the items (hence consolidate)
   
   couponed_cart = apply_coupons(consolidated_cart, coupons)
-  #apply method two 
+  #apply method two to get the coupons applied
   
   final_cart = apply_clearance(couponed_cart)
-  
-
+  #apply clearance which is the 20% dicount if the item is on clearance
+binding.pry
   total = 0
   final_cart.each do |name, properties|
     total += properties[:price] * properties[:count]
